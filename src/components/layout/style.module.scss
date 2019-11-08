@@ -1,0 +1,27 @@
+$color_top : rgba(252,219,0,1);
+$color_botton:rgba(255,153,0,1);
+@mixin bg-gradient(){
+    background:linear-gradient(to bottom, $color_top 0%, $color_botton 100%);
+
+}
+.appBar{
+
+    width: 100%;
+    height: 64px;
+    @include bg-gradient();
+    display: flex;
+    align-items: center;
+    & > span{
+        color:white;
+        margin-left: 1rem;
+        font-size:1.25rem;
+    }
+}
+.content{
+    padding:1rem;
+    min-height: calc(100vh-64px);
+    //background-color: rgb(237,237,237);
+    background-color:rgb(0,0,0);
+    box-sizing: border-box;
+
+}
